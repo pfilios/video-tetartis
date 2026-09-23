@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Τετάρτης - Αρχείο</title>
+    <!-- Φορτώνουμε το Tailwind CSS για εύκολο και μοντέρνο styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans p-6">
+
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Header / Τίτλος με Φωτογραφία -->
+        <div class="bg-white rounded-lg shadow-md p-8 mb-8 flex items-center gap-6">
+            <!-- Εδώ θα μπει η φωτογραφία. Ανεβάζεις το vassilis.jpg στο GitHub -->
+            <img src="vassilis.jpg" alt="Βασίλης Αστεριάδης" class="w-24 h-24 rounded-full object-cover border-4 border-blue-500 shadow-sm bg-gray-200" onerror="this.src='https://via.placeholder.com/150?text=Vassilis'">
+            <div>
+                <h1 class="text-4xl font-bold text-blue-900 mb-2">Τα "Video Τετάρτης"</h1>
+                <p class="text-gray-600 text-lg">Μια δεκαετία έμπνευσης, αυτοβελτίωσης και βαθιάς φιλίας. <br>Βασίλης, Πασχάλης, Χρήστος & Στέλιος (2017 - Σήμερα)</p>
+            </div>
+        </div>
+
+        <!-- Αναζήτηση -->
+        <div class="mb-6">
+            <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="Αναζήτηση θεματικής, τίτλου ή σχολίου..." class="w-full p-4 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 text-lg">
+        </div>
+
+        <!-- Πίνακας / Λίστα Videos -->
+        <div class="overflow-x-auto bg-white rounded-lg shadow-md">
+            <table class="min-w-full table-auto" id="videoTable">
+                <thead class="bg-blue-900 text-white">
+                    <tr>
+                        <th class="px-4 py-3 text-left w-16">Α/Α</th>
+                        <th class="px-4 py-3 text-left w-32">Ημερομηνία</th>
+                        <th class="px-4 py-3 text-left w-1/4">Τίτλος / Θέμα</th>
+                        <th class="px-4 py-3 text-left w-1/2">Κύρια Σημεία & Σχόλια</th>
+                        <th class="px-4 py-3 text-center">Video</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                    
+                    <!-- Παράδειγμα 1 (Πρόσφατο - 2025) -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-4 font-bold text-gray-500">#412</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">29 Ιαν 2025</td>
+                        <td class="px-4 py-4 font-semibold text-gray-800">Η βάση της πειθαρχίας / Προκλήσεις</td>
+                        <td class="px-4 py-4 text-sm">
+                            <ul class="list-disc pl-4 mb-2 text-gray-700">
+                                <li>Τα πάντα ξεκινούν με μια εσωτερική πρόκληση.</li>
+                                <li>Ό,τι αξίζει έχει ανηφόρα.</li>
+                                <li>Δεν αποδεχόμαστε τη ζωή μας, τη σχεδιάζουμε.</li>
+                            </ul>
+                            <div class="bg-blue-50 p-2 rounded text-blue-800 italic mt-2">
+                                <strong>Πασχάλης / Χρήστος / Στέλιος:</strong> Η πειθαρχημένη ρουτίνα είναι όντως ο μόνος δρόμος για την επιτυχία. Εξαιρετική υπενθύμιση.
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-center">
+                            <a href="https://www.youtube.com/watch?v=YOUR_LINK_HERE" target="_blank" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition text-sm font-semibold">Παρακολουθήστε</a>
+                        </td>
+                    </tr>
+
+                    <!-- Παράδειγμα 2 (Παλαιότερο - 2020) -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="px-4 py-4 font-bold text-gray-500">#185</td>
+                        <td class="px-4 py-4 whitespace-nowrap text-sm text-gray-600">30 Σεπ 2020</td>
+                        <td class="px-4 py-4 font-semibold text-gray-800">Χτίζοντας Αυτοπεποίθηση</td>
+                        <td class="px-4 py-4 text-sm">
+                            <p class="text-gray-700 mb-2">Ένα βίντεο που μας γεμίζει αυτοπεποίθηση παρά τις δύσκολες καταστάσεις και μας δίνει δύναμη να συνεχίσουμε.</p>
+                            <div class="bg-blue-50 p-2 rounded text-blue-800 italic mt-2">
+                                <strong>Πασχάλης & Χρήστος:</strong> "Αν ήξερες πόσο μας ανεβάζουν! Κάθε Τετάρτη πρωί λέω 'σήμερα θα στείλει βίντεο ο Βασίλης!' Έρχονται την κατάλληλη στιγμή."
+                            </div>
+                        </td>
+                        <td class="px-4 py-4 text-center">
+                            <a href="https://www.youtube.com/watch?v=FKPKMMGLE9o" target="_blank" class="bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700 transition text-sm font-semibold">Παρακολουθήστε</a>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Script για την Αναζήτηση -->
+    <script>
+        function filterTable() {
+            let input = document.getElementById("searchInput");
+            let filter = input.value.toLowerCase();
+            let table = document.getElementById("videoTable");
+            let tr = table.getElementsByTagName("tr");
+
+            // Ξεκινάμε από το 1 για να προσπεράσουμε το thead (επικεφαλίδες)
+            for (let i = 1; i < tr.length; i++) {
+                let textValue = tr[i].textContent || tr[i].innerText;
+                if (textValue.toLowerCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
